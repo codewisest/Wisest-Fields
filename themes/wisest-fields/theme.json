@@ -79,6 +79,24 @@
 					"fluid": false
 				},
 				{
+					"slug": "medium",
+					"size": "1.25rem",
+					"name": "Medium",
+					"fluid": {
+						"min": "1.25rem",
+						"max": "1.5rem"
+					}
+				},
+				{
+					"slug": "large",
+					"size": "2rem",
+					"name": "Large",
+					"fluid": {
+						"min": "1.75rem",
+						"max": "2rem"
+					}
+				},
+				{
 					"slug": "x-large",
 					"size": "2.75rem",
 					"name": "XL",
@@ -91,13 +109,6 @@
 		}
 	},
 	"styles": {
-		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--manrope)"
-		},
-		"color": {
-			"background": "var(--wp--preset--color--white)",
-			"text": "var(--wp--preset--color--black)"
-		},
 		"blocks": {
 			"core/post-title": {
 				"typography": {
@@ -108,7 +119,15 @@
 
 				}
 			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--manrope)"
+		},
+		"color": {
+			"background": "var(--wp--preset--color--white)",
+			"text": "var(--wp--preset--color--black)"
 		}
+		
 	}, 
 	"templateParts": [
 		{
