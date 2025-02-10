@@ -54,11 +54,6 @@
 		"typography": {
 			"fontFamilies": [
 				{
-					"name": "System (Roboto, Segoe UI, Ubuntu)",
-					"slug": "system",
-					"fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif"
-				},
-				{
 					"name": "Manrope",
 					"slug": "manrope",
 					"fontFamily": "Manrope",
