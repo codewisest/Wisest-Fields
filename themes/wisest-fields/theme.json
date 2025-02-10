@@ -68,12 +68,22 @@
 					]
 				}
 				
+			],
+			"defaultFontSizes": false,
+			"customFontSize": false,
+			"fontSizes": [
+				{
+					"slug": "extra-small",
+					"size": "1.1rem",
+					"name": "Extra small",
+					"fluid": false
+				}
 			]
 		}
 	},
 	"styles": {
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--system)"
+			"fontFamily": "var(--wp--preset--font-family--manrope)"
 		},
 		"color": {
 			"background": "var(--wp--preset--color--white)",
