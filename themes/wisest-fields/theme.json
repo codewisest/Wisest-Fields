@@ -310,6 +310,17 @@
 				"border": {
 				"radius": "8px"
 				}
+			},
+			"core/link": {
+				"color": {
+				"text": "var(--wp--preset--color--black)"
+				},
+				"typography": {
+				"fontSize": "var(--wp--preset--font-size--medium)",
+				"fontWeight": "600",
+				"textDecoration": "none"
+				}
+				
 			}
 		},
 		"typography": {
