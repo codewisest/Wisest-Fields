@@ -77,6 +77,15 @@
 					"size": "1.1rem",
 					"name": "Extra small",
 					"fluid": false
+				},
+				{
+					"slug": "x-large",
+					"size": "2.75rem",
+					"name": "XL",
+					"fluid": {
+						"min": "2.5rem",
+						"max": "2.75rem"
+					}
 				}
 			]
 		}
