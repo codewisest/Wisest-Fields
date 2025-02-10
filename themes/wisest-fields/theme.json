@@ -66,8 +66,8 @@
 			"fontFamily": "var(--wp--preset--font-family--system)"
 		},
 		"color": {
-			"background": "var(--wp--preset--color--black)",
-			"text": "var(--wp--preset--color--white)"
+			"background": "var(--wp--preset--color--white)",
+			"text": "var(--wp--preset--color--black)"
 		}
 	}
 }
