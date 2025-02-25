@@ -317,7 +317,7 @@
 				},
 				"typography": {
 				"fontSize": "var(--wp--preset--font-size--medium)",
-				"fontWeight": "600",
+				"fontWeight": "700",
 				"textDecoration": "none"
 				}
 				
