@@ -41,6 +41,11 @@
 					"slug": "transparent",
 					"color": "transparent",
 					"name": "Transparent"
+				},
+				{
+					"slug": "text_alt",
+					"color": "#361202",
+					"name": "Text_alt"
 				}
 			]
 		},
