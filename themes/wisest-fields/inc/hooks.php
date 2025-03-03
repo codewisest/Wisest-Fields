@@ -14,11 +14,11 @@ function wisestfields_enqueue_block_editor_assets() {
 
 add_action( 'enqueue_block_editor_assets', 'wisestfields_enqueue_block_editor_assets' );
 
-// function wisestfields_enqueue_block_assets() {
-// 	wp_enqueue_style(
-// 		'wisestfields-block-styles',
-// 		get_theme_file_uri( 'assets/css/block-styles.css' )
-// 	);
-// }
+function wisestfields_enqueue_block_assets() {
+	wp_enqueue_style(
+		'wisestfields-block-styles',
+		get_theme_file_uri( 'assets/css/block-styles.css' )
+	);
+}
 
-// add_action( 'enqueue_block_assets', 'wisestfields_enqueue_block_assets' );
+add_action( 'enqueue_block_assets', 'wisestfields_enqueue_block_assets' );
