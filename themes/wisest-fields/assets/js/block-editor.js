@@ -4,7 +4,7 @@ wp.blocks.registerBlockStyle( 'core/button', {
 } );
 
 wp.domReady( function () {
-	// wp.blocks.unregisterBlockStyle( 'core/quote', 'hand-default' );
-	// wp.blocks.unregisterBlockStyle( 'core/quote', 'plain' );
+	wp.blocks.unregisterBlockStyle( 'core/quote', 'default' );
+	wp.blocks.unregisterBlockStyle( 'core/quote', 'plain' );
 
 } );
