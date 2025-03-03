@@ -1,7 +1,23 @@
 /* .wp-block-buttons .wp-block-button.is-style-icon a::after {
     content: '>';
 } */
-
+.entry-content {
+    padding: 1rem;
+}
 .wp-block-cover__inner-container a {
     text-decoration: none;
+}
+
+.entry-content form.fluent_form_1 {
+    max-width: 660px;
+    margin: 4rem auto;
+    border: 2px solid #023630;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px #333;
+}
+
+.entry-content form.fluent_form_1 .ff-btn-submit:not(.ff_btn_no_style) {
+    background-color: #023630;
+    color: #ffffff;
 }
