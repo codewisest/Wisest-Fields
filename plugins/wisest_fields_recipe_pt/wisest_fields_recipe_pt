@@ -41,14 +41,14 @@ function wisest_fields_recipe_pt() {
       'item_scheduled'           => __( 'Announcement scheduled.', 'wisest_fields' ),
       'item_updated'             => __( 'Announcement updated.', 'wisest_fields' ),
       'item_link'                => __( 'Announcement Link', 'wisest_fields' ),
-      'item_link_description'    => __( 'A link to an announcement.', 'wisest_fields' ),
+      'item_link_description'    => __( 'A link to a recipe.', 'wisest_fields' ),
 
    );
 
    $args = array(
 
       'labels'                => $labels,
-      'description'           => __( 'organize and manage company announcements', 'wisest_fields' ),
+      'description'           => __( 'organize and manage recipe for users', 'wisest_fields' ),
       'public'                => false,
       'hierarchical'          => false,
       'exclude_from_search'   => true,
@@ -65,7 +65,7 @@ function wisest_fields_recipe_pt() {
       'supports'              => array( 'title', 'editor', 'revisions' ),
       'taxonomies'            => array(),
       'has_archive'           => false,
-      'rewrite'               => array( 'slug' => 'cpar_announcement' ),
+      'rewrite'               => array( 'slug' => 'recipe' ),
       'query_var'             => true,
       'can_export'            => true,
       'delete_with_user'      => false,
