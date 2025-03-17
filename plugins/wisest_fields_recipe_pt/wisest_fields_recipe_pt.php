@@ -1,79 +1,60 @@
 <?php
 /*
  * Plugin Name: Recipe Post Type
+ * Description: Custom post type for recipes
+ * Version: 1.0
+ * Text Domain: wisest_fields_recipe
  */
 
- add_action( 'init', 'wisest_fields_recipe_pt' );
+// Register text domain
+add_action('plugins_loaded', function() {
+    load_plugin_textdomain('wisest_fields_recipe', false, dirname(plugin_basename(__FILE__)));
+});
+
+add_action('init', 'wisest_fields_recipe_pt');
 
 function wisest_fields_recipe_pt() {
+    $labels = array(
+        'name'                     => __('Recipes', 'wisest_fields_recipe'),
+        'singular_name'            => __('Recipe', 'wisest_fields_recipe'),
+        'add_new'                  => __('Add New', 'wisest_fields_recipe'),
+        'add_new_item'             => __('Add New Recipe', 'wisest_fields_recipe'),
+        'edit_item'                => __('Edit Recipe', 'wisest_fields_recipe'),
+        'new_item'                 => __('New Recipe', 'wisest_fields_recipe'),
+        'view_item'                => __('View Recipe', 'wisest_fields_recipe'),
+        'view_items'               => __('View Recipes', 'wisest_fields_recipe'),
+        'search_items'             => __('Search Recipes', 'wisest_fields_recipe'),
+        'not_found'                => __('No Recipes found.', 'wisest_fields_recipe'),
+        'not_found_in_trash'       => __('No Recipes found in Trash.', 'wisest_fields_recipe'),
+        'parent_item_colon'        => __('Parent Recipes:', 'wisest_fields_recipe'),
+        'all_items'                => __('All Recipes', 'wisest_fields_recipe'),
+        'archives'                 => __('Recipe Archives', 'wisest_fields_recipe'),
+        'attributes'               => __('Recipe Attributes', 'wisest_fields_recipe'),
+        'insert_into_item'         => __('Insert into Recipe', 'wisest_fields_recipe'),
+        'uploaded_to_this_item'    => __('Uploaded to this Recipe', 'wisest_fields_recipe'),
+        'menu_name'                => __('Recipes', 'wisest_fields_recipe'),
+    );
 
-   $labels = array(
+    $args = array(
+        'labels'                => $labels,
+        'description'           => __('Organize and manage recipes', 'wisest_fields_recipe'),
+        'public'                => true,
+        'hierarchical'          => false,
+        'exclude_from_search'   => false,
+        'publicly_queryable'    => true,
+        'show_ui'              => true,
+        'show_in_menu'         => true,
+        'show_in_nav_menus'    => true,
+        'show_in_admin_bar'    => true,
+        'show_in_rest'         => true,
+        'menu_position'        => 5,
+        'menu_icon'            => 'dashicons-food',
+        'capability_type'      => 'post',
+        'supports'             => array('title', 'editor', 'thumbnail', 'excerpt', 'revisions'),
+        'has_archive'          => true,
+        'rewrite'             => array('slug' => 'recipes'),
+        'query_var'           => true
+    );
 
-      'name'                     => __( 'Announcements', 'wisest_fields' ),
-      'singular_name'            => __( 'Announcement', 'wisest_fields' ),
-      'add_new'                  => __( 'Add New', 'wisest_fields' ),
-      'add_new_item'             => __( 'Add New Announcement', 'wisest_fields' ),
-      'edit_item'                => __( 'Edit Announcement', 'wisest_fields' ),
-      'new_item'                 => __( 'New Announcement', 'wisest_fields' ),
-      'view_item'                => __( 'View Announcement', 'wisest_fields' ),
-      'view_items'               => __( 'View Announcements', 'wisest_fields' ),
-      'search_items'             => __( 'Search Announcements', 'wisest_fields' ),
-      'not_found'                => __( 'No Announcements found.', 'wisest_fields' ),
-      'not_found_in_trash'       => __( 'No Announcements found in Trash.', 'wisest_fields' ),
-      'parent_item_colon'        => __( 'Parent Announcements:', 'wisest_fields' ),
-      'all_items'                => __( 'All Announcements', 'wisest_fields' ),
-      'archives'                 => __( 'Announcement Archives', 'wisest_fields' ),
-      'attributes'               => __( 'Announcement Attributes', 'wisest_fields' ),
-      'insert_into_item'         => __( 'Insert into Announcement', 'wisest_fields' ),
-      'uploaded_to_this_item'    => __( 'Uploaded to this Announcement', 'wisest_fields' ),
-      'featured_image'           => __( 'Featured Image', 'wisest_fields' ),
-      'set_featured_image'       => __( 'Set featured image', 'wisest_fields' ),
-      'remove_featured_image'    => __( 'Remove featured image', 'wisest_fields' ),
-      'use_featured_image'       => __( 'Use as featured image', 'wisest_fields' ),
-      'menu_name'                => __( 'Announcements', 'wisest_fields' ),
-      'filter_items_list'        => __( 'Filter Announcement list', 'wisest_fields' ),
-      'filter_by_date'           => __( 'Filter by date', 'wisest_fields' ),
-      'items_list_navigation'    => __( 'Announcements list navigation', 'wisest_fields' ),
-      'items_list'               => __( 'Announcements list', 'wisest_fields' ),
-      'item_published'           => __( 'Announcement published.', 'wisest_fields' ),
-      'item_published_privately' => __( 'Announcement published privately.', 'wisest_fields' ),
-      'item_reverted_to_draft'   => __( 'Announcement reverted to draft.', 'wisest_fields' ),
-      'item_scheduled'           => __( 'Announcement scheduled.', 'wisest_fields' ),
-      'item_updated'             => __( 'Announcement updated.', 'wisest_fields' ),
-      'item_link'                => __( 'Announcement Link', 'wisest_fields' ),
-      'item_link_description'    => __( 'A link to a recipe.', 'wisest_fields' ),
-
-   );
-
-   $args = array(
-
-      'labels'                => $labels,
-      'description'           => __( 'organize and manage recipe for users', 'wisest_fields' ),
-      'public'                => false,
-      'hierarchical'          => false,
-      'exclude_from_search'   => true,
-      'publicly_queryable'    => false,
-      'show_ui'               => true,
-      'show_in_menu'          => true,
-      'show_in_nav_menus'     => false,
-      'show_in_admin_bar'     => false,
-      'show_in_rest'          => true,
-      'menu_position'         => null,
-      'menu_icon'             => 'dashicons-megaphone',
-      'capability_type'       => 'post',
-      'capabilities'          => array(),
-      'supports'              => array( 'title', 'editor', 'revisions' ),
-      'taxonomies'            => array(),
-      'has_archive'           => false,
-      'rewrite'               => array( 'slug' => 'recipe' ),
-      'query_var'             => true,
-      'can_export'            => true,
-      'delete_with_user'      => false,
-      'template'              => array(),
-      'template_lock'         => false,
-
-   );
-
-   register_post_type( 'wisest_fields_recipe_cpt', $args );
-
+    register_post_type('recipe', $args);
 }
