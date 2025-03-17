@@ -11,6 +11,13 @@ add_action('plugins_loaded', function() {
     load_plugin_textdomain('wisest_fields_recipe', false, dirname(plugin_basename(__FILE__)));
 });
 
+// Flush rewrite rules on plugin activation
+register_activation_hook(__FILE__, 'wisest_fields_recipe_flush_rules');
+function wisest_fields_recipe_flush_rules() {
+    wisest_fields_recipe_pt(); // Register the post type
+    flush_rewrite_rules(); // Flush rewrite rules
+}
+
 add_action('init', 'wisest_fields_recipe_pt');
 
 function wisest_fields_recipe_pt() {
