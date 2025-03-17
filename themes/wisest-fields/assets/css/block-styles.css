@@ -12,7 +12,7 @@
     text-decoration: none;
 }
 
-/*  */
+/* form styling  */
 .entry-content form.fluent_form_1 {
     max-width: 660px;
     margin: 4rem auto;
@@ -39,7 +39,11 @@ ul.wp-block-woocommerce-product-template {
     margin: 0;
 }
 
-/* Responsive adjustments */
+.wp-container-core-group-is-layout-6 {
+    justify-content: center;
+  }
+
+/* Responsive adjustments for products collection*/
 @media (max-width: 768px) {
     ul.wp-block-woocommerce-product-template {
         grid-template-columns: repeat(2, 1fr) !important;
