@@ -39,6 +39,7 @@ ul.wp-block-woocommerce-product-template {
     margin: 0;
 }
 
+/* center product collection */
 .wp-container-core-group-is-layout-6 {
     justify-content: center;
   }
