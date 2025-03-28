@@ -72,14 +72,6 @@ ul.wp-block-woocommerce-product-template li {
     margin: 0 auto;
 }
 
-/* Ensure the viewport is visible and aligns slides properly */
-.flex-viewport {
-    overflow: visible !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    border: 2px solid red;
-}
 
 /* Center the Slider container */
 #metaslider_218 {
