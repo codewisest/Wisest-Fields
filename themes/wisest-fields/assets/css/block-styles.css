@@ -72,6 +72,7 @@ ul.wp-block-woocommerce-product-template li {
     margin: 0 auto;
 }
 
+/* Ensure the viewport is visible and aligns slides properly */
 .flex-viewport {
     overflow: visible !important;
     display: flex !important;
@@ -80,10 +81,12 @@ ul.wp-block-woocommerce-product-template li {
     border: 2px solid red;
 }
 
+/* Center the Slider container */
 #metaslider_218 {
     margin: 0 auto;
 }
 
+/* Align slides within the slider */
 #metaslider_218 .slides {
     display: flex !important;
     justify-content: center !important;
@@ -92,12 +95,14 @@ ul.wp-block-woocommerce-product-template li {
     width: 100% !important;
 }
 
+/* Ensure each slide takes up the full width and is centered */
 #metaslider_218 .slides li {
     display: flex !important;
     justify-content: center !important;
     width: 100% !important;
 }
 
+/* Style images inside the slider */
 #metaslider_218 .slides img {
     max-width: 800px;
     height: auto;
